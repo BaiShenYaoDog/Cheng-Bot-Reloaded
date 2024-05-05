@@ -1,0 +1,6 @@
+/ChengBot/target/
+/ChengBot-Web/node_modules/
+
+*.iml
+/config.yml
+/lang.yml

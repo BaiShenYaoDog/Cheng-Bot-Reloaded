@@ -1,0 +1,13 @@
+import './assets/fonts/HarmonyOS_Sans_SC_Medium.ttf'
+import './assets/scss/index.scss'
+
+import {createApp} from 'vue'
+
+import App from './App.vue'
+import router from './router'
+
+const app = createApp(App)
+
+app.use(router)
+
+app.mount('#app')
