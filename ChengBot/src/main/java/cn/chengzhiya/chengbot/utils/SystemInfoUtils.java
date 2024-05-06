@@ -5,7 +5,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
-import oshi.hardware.HWDiskStore;
 import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
@@ -19,9 +18,9 @@ import java.util.concurrent.Future;
 public class SystemInfoUtils {
     public static SystemInfo systemInfo = new SystemInfo();
     public static OperatingSystem os = systemInfo.getOperatingSystem();
+    public static List<OSFileStore> disks = os.getFileSystem().getFileStores();
     public static HardwareAbstractionLayer hardware = systemInfo.getHardware();
     public static CentralProcessor cpu = hardware.getProcessor();
-    public static List<OSFileStore> disks = os.getFileSystem().getFileStores();
     public static Integer CPUUsage = null;
     public static ExecutorService executor = Executors.newFixedThreadPool(10);
 
